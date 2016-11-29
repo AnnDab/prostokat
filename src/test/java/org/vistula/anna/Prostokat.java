@@ -4,13 +4,20 @@ package org.vistula.anna;
  * Created by Anna on 24.11.2016.
  */
 public class Prostokat {
-    public int ObliczPole(int a, int b){
-        int Pole=a*b;
-        return Pole;
+    private int a;
+    private int b;
+
+    public Prostokat(int a, int b) {
+        this.a = a;
+        this.b = b;
     }
-    public int ObliczObwod(int a, int b){
-        int Obwod=2*a+2*b;
-        return Obwod;
+
+    public int obliczPole() {
+        return a * b;
+    }
+
+    public int obliczObwod() {
+        return 2 * a + 2 * b;
     }
 }
 

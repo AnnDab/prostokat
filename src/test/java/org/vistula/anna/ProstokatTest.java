@@ -1,5 +1,7 @@
 package org.vistula.anna;
+
 import static org.junit.Assert.assertEquals;
+
 import org.junit.Test;
 
 /**
@@ -8,22 +10,18 @@ import org.junit.Test;
 public class ProstokatTest {
 
     @Test
-    public void obliczaPoprawniePoleProstokata(){
-       Prostokat prostokat = new Prostokat();
-        System.out.println("Pole wynosi "+ prostokat.ObliczPole(2, 4)+".");
+    public void obliczaPoprawniePoleProstokata() {
+        Prostokat prostokat = new Prostokat(2, 4);
         int oczekiwanePole = 8;
-        int obliczonePole = prostokat.ObliczPole(2,4);
-        assertEquals(oczekiwanePole,obliczonePole);
-
+        int obliczonePole = prostokat.obliczPole();
+        assertEquals(oczekiwanePole, obliczonePole);
     }
 
     @Test
-    public void obliczaPoprawnieObwodProstokata(){
-    Prostokat prostokat = new Prostokat();
-    System.out.println("Obwod wynosi "+ prostokat.ObliczObwod(2,4)+".");
+    public void obliczaPoprawnieObwodProstokata() {
+        Prostokat prostokat = new Prostokat(2, 4);
         int oczekiwanyObwod = 12;
-        int obliczonyObwod = prostokat.ObliczObwod(2,4);
-        assertEquals(oczekiwanyObwod,obliczonyObwod);
+        int obliczonyObwod = prostokat.obliczObwod();
+        assertEquals(oczekiwanyObwod, obliczonyObwod);
     }
-
 }
